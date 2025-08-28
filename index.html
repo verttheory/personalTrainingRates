@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vert Theory: Trainer Compensation & Client Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 450px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-[#1A2B5B] text-white p-6 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight">Vert Theory Compensation & Pricing</h1>
+            <p class="mt-2 text-lg text-[#E60000]">A Transparent Overview for Our Valued Trainers</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-[#1A2B5B] mb-4">Our Partnership Philosophy</h2>
+            <p class="max-w-3xl mx-auto text-lg">We believe in a transparent and mutually beneficial partnership. This document outlines our client pricing structure and the corresponding compensation for our expert trainers. Our goal is to create a clear and rewarding system that allows you to focus on what you do best: coaching.</p>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#1A2B5B] mb-6">Client Pricing: Personal Training (1-on-1)</h2>
+            <div class="w-full max-w-4xl mx-auto">
+                <div class="chart-container">
+                    <canvas id="personalTrainingCostChart"></canvas>
+                </div>
+            </div>
+            <p class="text-center mt-4 text-gray-600">This chart breaks down the cost per session for our 1-on-1 personal training packages. As clients commit to larger packages, the per-session rate decreases, offering them greater value for their investment.</p>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#1A2B5B] mb-6">Client Pricing: 2-on-1 Personal Training</h2>
+            <div class="w-full max-w-4xl mx-auto">
+                <div class="chart-container">
+                    <canvas id="twoOnOneTrainingCostChart"></canvas>
+                </div>
+            </div>
+            <p class="text-center mt-4 text-gray-600">This chart illustrates the cost per session, per person, for our 2-on-1 training packages. This option provides a more affordable entry point for clients while still offering personalized coaching.</p>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-center text-[#1A2B5B] mb-4">Trainer Compensation: Pay Per Session</h3>
+                <div class="chart-container h-96">
+                    <canvas id="trainerPayChart"></canvas>
+                </div>
+                <p class="text-center mt-4 text-gray-600">This chart visualizes the pay range for each training session type, highlighting the increased earning potential for trainers who bring in their own clients.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-center text-[#1A2B5B] mb-4">Earning Potential at a Glance</h3>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <h4 class="font-bold text-lg text-[#1A2B5B]">Personal Training (1-on-1)</h4>
+                        <p class="text-sm">Earn **$40-70** per session, with higher rates for clients you bring to Vert Theory.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <h4 class="font-bold text-lg text-[#1A2B5B]">2-on-1 Training</h4>
+                        <p class="text-sm">Earn **$60-95** per session, our highest paying session type, rewarding you for your network and coaching skill.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <h4 class="font-bold text-lg text-[#1A2B5B]">Group Classes</h4>
+                        <p class="text-sm">A consistent **$40-50** per class, providing a stable income stream.</p>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-center text-[#1A2B5B] mb-4 mt-8">Booking Process</h3>
+                <div class="relative p-6">
+                    <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 rounded"></div>
+                    <div class="relative mb-8">
+                        <div class="absolute left-1/2 -ml-4 w-8 h-8 bg-[#1A2B5B] rounded-full text-white flex items-center justify-center font-bold">1</div>
+                        <div class="ml-10 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-lg">Client Booking</h4>
+                            <p class="text-sm">All clients book and pay for sessions through the Vert Theory Mindbody app or website.</p>
+                        </div>
+                    </div>
+                    <div class="relative mb-8">
+                        <div class="absolute left-1/2 -ml-4 w-8 h-8 bg-[#E60000] rounded-full text-white flex items-center justify-center font-bold">2</div>
+                        <div class="ml-10 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-lg">Space Allocation</h4>
+                            <p class="text-sm">This centralized system allows us to manage studio capacity and avoid scheduling conflicts.</p>
+                        </div>
+                    </div>
+                    <div class="relative mb-8">
+                        <div class="absolute left-1/2 -ml-4 w-8 h-8 bg-[#0066FF] rounded-full text-white flex items-center justify-center font-bold">3</div>
+                        <div class="ml-10 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-lg">Seamless Experience</h4>
+                            <p class="text-sm">Ensures a smooth and professional experience for both trainers and clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-[#1A2B5B] text-white text-center p-4 mt-12">
+        <p>&copy; 2025 Vert Theory Performance Studio. A Partnership in Performance.</p>
+    </footer>
+
+    <script>
+        const wrapText = (text, maxChars) => {
+            if (text.length <= maxChars) {
+                return text;
+            }
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxChars) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const colors = {
+            darkBlue: '#1A2B5B',
+            red: '#E60000',
+            blue: '#0066FF',
+            lightGrey: '#F3F4F6',
+            darkGrey: '#4B5563'
+        };
+
+        new Chart(document.getElementById('personalTrainingCostChart'), {
+            type: 'bar',
+            data: {
+                labels: ['1 Session', '5 Sessions', '10 Sessions', '15 Sessions', '25 Sessions'],
+                datasets: [{
+                    label: 'Cost Per Session ($)',
+                    data: [115, 103, 103, 96.67, 92],
+                    backgroundColor: colors.darkBlue,
+                    borderColor: colors.red,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Cost Per Session ($)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Personal Training (1-on-1) Cost Per Session by Package'
+                    },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('twoOnOneTrainingCostChart'), {
+            type: 'bar',
+            data: {
+                labels: ['1 Session', '5 Sessions', '10 Sessions', '15 Sessions', '25 Sessions'],
+                datasets: [{
+                    label: 'Cost Per Session Per Person ($)',
+                    data: [70, 63, 63, 59.67, 56],
+                    backgroundColor: colors.blue,
+                    borderColor: colors.red,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Cost Per Session Per Person ($)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '2-on-1 Training Cost Per Session by Package'
+                    },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('trainerPayChart'), {
+            type: 'bar',
+            data: {
+                labels: [
+                    wrapText('PT (Studio Client)', 16), 
+                    wrapText('PT (Trainer Client)', 16), 
+                    wrapText('2-on-1 (Studio Client)', 16), 
+                    wrapText('2-on-1 (Trainer Client)', 16), 
+                    wrapText('Group Class', 16)
+                ],
+                datasets: [{
+                    label: 'Pay Range ($)',
+                    data: [
+                        [40, 50],
+                        [50, 70],
+                        [60, 80],
+                        [80, 95],
+                        [40, 50]
+                    ],
+                    backgroundColor: [
+                        colors.darkBlue,
+                        colors.blue,
+                        colors.darkBlue,
+                        colors.blue,
+                        colors.darkGrey
+                    ],
+                    borderColor: colors.red,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Pay Per Session ($)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Trainer Pay Ranges by Session Type'
+                    },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
